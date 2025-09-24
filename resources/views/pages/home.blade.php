@@ -4,8 +4,9 @@
 
 @section('content')
     @include('sections.header')
+    @include('sections.my-services')
+    @include('sections.my-projects')
 
-    <section class="py-16">
 
-    </section>
+
 @endsection

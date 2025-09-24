@@ -1,11 +1,89 @@
 @import 'tailwindcss';
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+	--font-sans: 'Onest', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--font-display: 'Onest', var(--font-sans);
+	--color-surface: #ffffff;
+	--color-surface-muted: #f6f7f9;
+	--color-body: #0f172a;
+	--color-subtle: #5b6475;
+	--text-xs: clamp(0.75rem, 0.71rem + 0.3vw, 0.82rem);
+	--text-sm: clamp(0.85rem, 0.81rem + 0.35vw, 0.95rem);
+	--text-base: clamp(1rem, 0.95rem + 0.4vw, 1.1rem);
+	--text-lg: clamp(1.1rem, 1.04rem + 0.45vw, 1.25rem);
+	--text-xl: clamp(1.35rem, 1.24rem + 0.5vw, 1.6rem);
+	--text-2xl: clamp(1.75rem, 1.55rem + 0.6vw, 2.2rem);
+	--text-3xl: clamp(2.1rem, 1.8rem + 0.9vw, 2.8rem);
+	--text-4xl: clamp(2.7rem, 2.35rem + 1.1vw, 3.4rem);
+}
+
+@layer base {
+	:root {
+		color-scheme: light;
+	}
+
+	body {
+		@apply bg-[#f6f7f9] text-slate-900 font-sans antialiased leading-relaxed m-0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold text-slate-900 tracking-tight;
+	}
+
+	p {
+		@apply text-slate-600 leading-relaxed;
+	}
+}
+
+@layer utilities {
+	.heading-hero {
+		@apply text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 text-balance leading-tight;
+	}
+
+	.heading-section {
+		@apply text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 text-balance leading-tight;
+	}
+
+	.heading-card {
+		@apply text-lg sm:text-xl font-semibold text-slate-900 leading-snug;
+	}
+
+	.body-lg {
+		@apply text-lg text-slate-600 leading-relaxed;
+	}
+
+	.body-base {
+		@apply text-base text-slate-600 leading-relaxed;
+	}
+
+	.body-sm {
+		@apply text-sm text-slate-500 leading-relaxed;
+	}
+
+	.badge-pill {
+		@apply inline-flex items-center gap-2 rounded-full bg-white/90 px-3 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-xs md:text-sm font-medium tracking-[0.18em] sm:tracking-[0.2em] text-slate-600 shadow;
+	}
+
+	.button-primary {
+		@apply inline-flex items-center justify-center gap-2 rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow transition-colors duration-200 hover:bg-slate-800;
+	}
+
+	.button-secondary {
+		@apply inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-900 transition-colors duration-200 hover:bg-slate-100;
+	}
+
+	.caption {
+		@apply text-xs uppercase tracking-[0.2em] text-slate-500;
+	}
+}
+
+.onest-font {
+	font-family: 'Onest', sans-serif;
 }

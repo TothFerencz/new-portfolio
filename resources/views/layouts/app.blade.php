@@ -8,13 +8,13 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="antialiased bg-gray-50 text-gray-800">
+<body class="antialiased bg-gray-50 text-gray-800 onest-font">
 
     {{-- Header --}}
-    @include('sections.header')
+
 
     {{-- Navbar --}}
-
+    @include('layouts.navbar')
 
     {{-- Oldalspecifikus tartalom --}}
     <main>
@@ -22,8 +22,9 @@
     </main>
 
     {{-- Footer --}}
+    @include('layouts.footer')
 
-
+    {{-- Scripts --}}
     @vite('resources/js/app.js')
 </body>
 
