@@ -8,7 +8,6 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\FileUpload;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -26,6 +25,7 @@ class ProjectResource extends Resource
         return $form
             ->schema([
                 TextInput::make('title')
+                    ->label('Title')
                     ->required()
                     ->reactive()
                     ->afterStateUpdated(fn ($state, callable $set) =>
@@ -33,24 +33,41 @@ class ProjectResource extends Resource
                     ),
 
                 TextInput::make('slug')
+                    ->label('Slug')
                     ->disabled()
                     ->required()
                     ->unique(ignoreRecord: true),
 
-                TextInput::make('url')->url(),
-                TextInput::make('category'),
-                TextInput::make('timeline'),
-                Textarea::make('short_description'),
+                TextInput::make('category')
+                    ->label('Category')
+                    ->required(),
 
-                FileUpload::make('image')
-    ->image()
-    ->directory('projects')
-    ->disk('public')
-    ->maxSize(2048),
+                TextInput::make('years')
+                    ->label('Year')
+                    ->numeric()
+                    ->required(),
 
-                KeyValue::make('options')
-                    ->label('Extra opciók')
-                    ->addButtonLabel('Új mező'),
+                TextInput::make('timeline')
+                    ->label('Timeline')
+                    ->required(),
+
+                Textarea::make('short_description')
+                    ->label('Short Description')
+                    ->rows(3),
+
+                FileUpload::make('first_image')
+                    ->label('First Image')
+                    ->image()
+                    ->directory('projects')
+                    ->disk('public')
+                    ->maxSize(2048),
+
+                FileUpload::make('second_image')
+                    ->label('Second Image')
+                    ->image()
+                    ->directory('projects')
+                    ->disk('public')
+                    ->maxSize(2048),
             ]);
     }
 
@@ -58,12 +75,23 @@ class ProjectResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image')->square(),
+                Tables\Columns\ImageColumn::make('first_image')
+                    ->label('Preview')
+                    ->square(),
+
                 Tables\Columns\TextColumn::make('title')
                     ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('category'),
-                Tables\Columns\TextColumn::make('timeline'),
+
+                Tables\Columns\TextColumn::make('category')
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('years')
+                    ->label('Year')
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('timeline')
+                    ->label('Timeline'),
             ])
             ->filters([
                 //
@@ -80,9 +108,7 @@ class ProjectResource extends Resource
 
     public static function getRelations(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 
     public static function getPages(): array

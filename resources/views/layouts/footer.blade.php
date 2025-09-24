@@ -1,35 +1,46 @@
-<footer class="bg-white py-16 px-4 sm:px-6">
-    <div class="max-w-6xl mx-auto text-center">
-
-        <!-- Kompakt fekete box háttérrel -->
-        <div class="relative rounded-3xl overflow-hidden">
-            <!-- Háttérkép invertálva -->
-            <img src="{{ asset('storage/header.png') }}" alt="Footer Background"
-                class="absolute inset-0 w-full h-full object-cover filter invert">
-
-            <!-- Fekete overlay -->
-            <div class="absolute inset-0 bg-black/50"></div>
-
-            <!-- Tartalom -->
-            <div class="relative z-10 py-20 sm:py-24 lg:py-28 px-6 text-white">
-                <p class="caption text-white/70 mb-3 tracking-[0.3em]">Start You Journey !</p>
-                <h2 class="heading-card text-white sm:text-3xl md:text-4xl mb-4">
-                    Let’s bring your vision to life
-                </h2>
-                <p class="body-sm text-white/80 mb-6 max-w-xl mx-auto">
-                    Transform your ideas into real-world achievements
-                </p>
-                <a href="{{ url('/contact') }}"
-                    class="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-black shadow transition hover:bg-white/90">
-                    Get In Touch
-                </a>
+<!-- resources/views/partials/footer.blade.php -->
+<footer class="bg-white pt-20 pb-10 px-6">
+    <div class="max-w-6xl mx-auto bg-gray-50 rounded-3xl text-center py-16 px-6 relative">
+        <!-- Villám ikon körben -->
+        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+            <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path fill="#fff" fill-rule="evenodd"
+                        d="M13.232 2.287A.75.75 0 0 1 13.75 3v6.25H19a.75.75 0 0 1 .607 1.191l-8 11a.75.75 0 0 1-1.357-.44v-6.25H5a.75.75 0 0 1-.607-1.192l8-11a.75.75 0 0 1 .839-.272"
+                        clip-rule="evenodd" />
+                </svg>
             </div>
         </div>
 
-        <!-- Copyright + byline -->
-        <div class="mt-6 text-slate-500 text-sm flex flex-col sm:flex-row items-center justify-between gap-2">
-            <p class="body-sm text-slate-500">All right reserved. ©2025</p>
-            <p class="body-sm text-slate-500">Made with ❤️ by Ferencz</p>
+        <!-- Badge -->
+        <span
+            class="inline-flex items-center bg-white text-gray-700 text-sm px-4 py-1 rounded-full border border-gray-300 mb-6">
+            Start Your Journey
+        </span>
+
+        <!-- Headline -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Let’s bring your vision to life
+        </h2>
+
+        <!-- Leírás -->
+        <p class="text-gray-600 max-w-xl mx-auto mb-8 text-base">
+            Transform your ideas into real-world achievements.
+        </p>
+
+        <!-- Gomb -->
+        <a href="{{ url('/contact') }}"
+            class="inline-block px-6 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-gray-900 transition">
+            Let’s Get Started
+        </a>
+    </div>
+
+    <!-- Alsó sor -->
+    <div class="max-w-6xl mx-auto mt-10 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
+        <p>All rights reserved. ©2025</p>
+        <div class="flex space-x-6 mt-4 sm:mt-0">
+            <a href="#" class="hover:text-gray-900">Licence</a>
+            <a href="#" class="hover:text-gray-900">Changelog</a>
         </div>
     </div>
 </footer>

@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Főoldal – ')
+@section('title', 'Toth Ferencz ')
 
 @section('content')
     @include('sections.header')
-    @include('sections.my-services')
-    @include('sections.my-projects')
-
-
-
+    @include('sections.text')
+    @include('sections.priority')
+    @include('sections.portfolio')
+    @include('sections.price')
+    @include('sections.about')
 @endsection

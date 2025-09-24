@@ -9,17 +9,13 @@ class Project extends Model
 {
     protected $fillable = [
         'title',
-        'slug',
-        'url',
         'category',
-        'timeline',
         'short_description',
-        'options',
-        'image',
-    ];
-
-    protected $casts = [
-        'options' => 'array',
+        'first_image',
+        'second_image',
+        'slug',
+        'years',
+        'timeline',
     ];
 
     protected static function boot()
@@ -33,7 +29,8 @@ class Project extends Model
         });
 
         static::updating(function ($project) {
-            if (empty($project->slug) && !empty($project->title)) {
+            // slug mindig újragenerálódjon, ha a title változik
+            if ($project->isDirty('title')) {
                 $project->slug = Str::slug($project->title);
             }
         });
