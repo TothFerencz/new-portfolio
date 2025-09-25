@@ -1,4 +1,4 @@
-<section class="bg-white pt-32 pb-20 px-6">
+<section class="bg-white pt-12 pb-20 px-6">
     <div class="max-w-6xl mx-auto text-center">
         <!-- Badge -->
         <span

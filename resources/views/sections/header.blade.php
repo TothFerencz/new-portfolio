@@ -8,15 +8,14 @@
                 <span>Highly regarded</span>
             </div>
 
-
             <!-- Headline -->
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-gray-900">
-                Creative Digital Studio
+                Full Stack Developer
             </h1>
 
             <!-- Paragraph -->
             <p class="text-gray-600 max-w-lg mx-auto lg:mx-0 text-base sm:text-lg">
-                A platform where creativity and technology converge, offering tailored design solutions for each client.
+                Building modern, scalable and user-focused web applications with clean code and proven best practices.
             </p>
 
             <!-- CTA gombok -->
@@ -32,7 +31,6 @@
             </div>
 
             <!-- Kártyák bal oldalt -->
-            <!-- Kártyák bal oldalt -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8">
                 <!-- Card 1 -->
                 <div class="bg-gray-100 rounded-2xl p-6 flex flex-col items-start space-y-3">
@@ -44,8 +42,8 @@
                         </svg>
                         <span>Expert</span>
                     </div>
-                    <h3 class="font-semibold text-lg text-gray-900">Brand Design</h3>
-                    <p class="text-gray-600 text-sm">Logos that reflect your core values.</p>
+                    <h3 class="font-semibold text-lg text-gray-900">Backend Development</h3>
+                    <p class="text-gray-600 text-sm">Robust APIs and scalable server-side solutions.</p>
                 </div>
 
                 <!-- Card 2 -->
@@ -58,32 +56,29 @@
                         </svg>
                         <span>Expert</span>
                     </div>
-                    <h3 class="font-semibold text-lg text-gray-900">UX Design</h3>
-                    <p class="text-gray-600 text-sm">We integrate research and design thinking</p>
+                    <h3 class="font-semibold text-lg text-gray-900">Frontend Development</h3>
+                    <p class="text-gray-600 text-sm">Modern, responsive and user-friendly interfaces.</p>
                 </div>
             </div>
-
         </div>
 
         <!-- Jobb oldal -->
         <div class="space-y-8">
             <!-- Kép -->
-            <!-- Jobb oldal: kép -->
             <div class="flex justify-center lg:justify-end">
                 <div class="w-[600px] h-[300px]">
-                    <img src="{{ asset('storage/header.png') }}" alt="Creative Studio"
+                    <img src="{{ asset('storage/header.png') }}" alt="Full Stack Developer"
                         class="w-full h-full object-cover rounded-2xl">
                 </div>
             </div>
 
-
-            <!-- Skilled Designers + statisztikák -->
+            <!-- Skilled Developers + statisztikák -->
             <div class="space-y-6 text-center lg:text-left">
                 <!-- Badge -->
                 <div class="flex justify-center lg:justify-start">
                     <div
                         class="flex items-center space-x-2 text-sm text-gray-700 border border-gray-200 px-2 py-1 rounded-md">
-                        <span>Skilled Designers</span>
+                        <span>Skilled Developer</span>
                     </div>
                 </div>
 
@@ -91,16 +86,16 @@
                 <div class="space-y-6 text-center lg:text-left">
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                         <div>
-                            <p class="text-2xl font-bold text-gray-900">17+</p>
-                            <p class="text-gray-600 text-sm">Websites launched</p>
+                            <p class="text-2xl font-bold text-gray-900">25+</p>
+                            <p class="text-gray-600 text-sm">Projects delivered</p>
                         </div>
                         <div>
-                            <p class="text-2xl font-bold text-gray-900">88%</p>
+                            <p class="text-2xl font-bold text-gray-900">95%</p>
                             <p class="text-gray-600 text-sm">Client satisfaction rate</p>
                         </div>
                         <div>
-                            <p class="text-2xl font-bold text-gray-900">11+</p>
-                            <p class="text-gray-600 text-sm">Years of expertise</p>
+                            <p class="text-2xl font-bold text-gray-900">3+</p>
+                            <p class="text-gray-600 text-sm">Years of experience</p>
                         </div>
                     </div>
 
@@ -115,8 +110,6 @@
                         </a>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>

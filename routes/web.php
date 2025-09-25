@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\ContactMessageController;
+use App\Http\Controllers\ProjectController;
 use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,4 @@ Route::get('/contact', function () {
 });
 
 Route::post('/contact', ContactMessageController::class)->name('contact.submit');
+Route::get('/portfolio/{slug}', [ProjectController::class, 'show'])->name('portfolio.show');

@@ -9,13 +9,13 @@
 
         <!-- Cím -->
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Your goals are our top priority
+            Clean code, strong focus, real results
         </h2>
 
         <!-- Leírás -->
         <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-base sm:text-lg">
-            From concept to launch, we're committed to your success with rapid response times
-            and personalized attention to detail.
+            As a Full Stack Developer, I deliver robust and scalable solutions,
+            always prioritizing performance, usability and long-term maintainability.
         </p>
 
         <!-- Grid -->
@@ -23,7 +23,7 @@
             <!-- Card 1 -->
             <div class="bg-gray-50 rounded-2xl p-6 text-left border border-gray-200 relative">
                 <div class="flex items-start">
-                    <!-- Branding SVG -->
+                    <!-- Eredeti Branding SVG -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <g fill="none" fill-rule="evenodd">
                             <path
@@ -36,16 +36,16 @@
                     </svg>
                     <span class="ml-auto text-xs text-gray-500 border border-gray-300 rounded-md px-2 py-1">01</span>
                 </div>
-                <h3 class="font-semibold text-lg mt-4 mb-2">Branding</h3>
+                <h3 class="font-semibold text-lg mt-4 mb-2">Backend</h3>
                 <p class="text-gray-600 text-sm">
-                    We craft unique brand identities that resonate with your audience.
+                    APIs and business logic built for scalability and stability.
                 </p>
             </div>
 
             <!-- Card 2 -->
             <div class="bg-gray-50 rounded-2xl p-6 text-left border border-gray-200 relative">
                 <div class="flex items-start">
-                    <!-- Development SVG -->
+                    <!-- Eredeti Development SVG -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             color="#000">
@@ -62,16 +62,16 @@
                     </svg>
                     <span class="ml-auto text-xs text-gray-500 border border-gray-300 rounded-md px-2 py-1">02</span>
                 </div>
-                <h3 class="font-semibold text-lg mt-4 mb-2">Development</h3>
+                <h3 class="font-semibold text-lg mt-4 mb-2">Frontend</h3>
                 <p class="text-gray-600 text-sm">
-                    We provide strong solutions that evolve with your business.
+                    Modern, responsive interfaces focused on user experience.
                 </p>
             </div>
 
             <!-- Card 3 -->
             <div class="bg-gray-50 rounded-2xl p-6 text-left border border-gray-200 relative">
                 <div class="flex items-start">
-                    <!-- Website SVG -->
+                    <!-- Eredeti Website SVG -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
                         <g fill="#000">
                             <path fill-rule="evenodd"
@@ -87,9 +87,9 @@
                     </svg>
                     <span class="ml-auto text-xs text-gray-500 border border-gray-300 rounded-md px-2 py-1">03</span>
                 </div>
-                <h3 class="font-semibold text-lg mt-4 mb-2">Website</h3>
+                <h3 class="font-semibold text-lg mt-4 mb-2">Full Stack</h3>
                 <p class="text-gray-600 text-sm">
-                    We build custom websites that combine design and functionality.
+                    End-to-end development: from database to user interface.
                 </p>
             </div>
         </div>

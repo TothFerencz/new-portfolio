@@ -4,29 +4,29 @@
 
         <!-- Bal oldal: profil -->
         <div class="flex items-center space-x-3">
-            <img src="{{ asset('storage/myphoto.png') }}" alt="Profile" class="w-14 h-14 rounded-full object-cover">
+            <img src="{{ asset('storage/myphoto.png') }}" alt="Profile"
+                class="w-14 h-14 rounded-full object-cover object-top">
             <div class="leading-tight">
                 <p class="font-semibold text-sm sm:text-base">Hi, I'm Ferencz.</p>
-                <p class="text-gray-500 text-xs sm:text-sm">Designer</p>
+                <p class="text-gray-500 text-xs sm:text-sm">Developer</p>
             </div>
         </div>
 
         <!-- Közép: menü -->
         <div class="hidden md:flex flex-1 justify-center items-center space-x-5 text-sm">
-            <a href="{{ url('/portfolio') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
+            <a href="{{ url('') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
                 Portfolio
             </a>
-            <a href="{{ url('/blog') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
+            <a href="{{ url('') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
                 Blog
             </a>
-            <a href="{{ url('/pricing') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
+            <a href="{{ url('') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
                 Pricing
             </a>
-            <a href="{{ url('/testimonials') }}"
-                class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
-                Testimonials
+            <a href="{{ url('') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
+                About
             </a>
-            <a href="{{ url('/faq') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
+            <a href="{{ url('') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
                 Faq
             </a>
             <span class="text-gray-300">|</span>
