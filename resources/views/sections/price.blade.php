@@ -2,7 +2,7 @@
 @php
     $plans = isset($plans) ? collect($plans) : collect();
 @endphp
-<section class="bg-white pt-12 pb-20 px-6">
+<section id="pricing" class="bg-white pt-12 pb-20 px-6">
     <div class="max-w-6xl mx-auto text-center">
         <span class="inline-flex items-center justify-center bg-white border border-gray-200 px-4 py-1 text-detail mb-6">
             Pricing

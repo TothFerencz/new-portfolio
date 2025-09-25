@@ -13,7 +13,8 @@
         </div>
 
         <!-- Badge -->
-        <span class="inline-flex items-center justify-center bg-white border border-gray-200 px-4 py-1 text-detail mb-6">
+        <span
+            class="inline-flex items-center justify-center bg-white border border-gray-200 px-4 py-1 text-detail mb-6">
             Let’s Build Together
         </span>
 
@@ -36,11 +37,11 @@
     </div>
 
     <!-- Alsó sor -->
-    <div class="max-w-6xl mx-auto mt-10 flex flex-col sm:flex-row justify-between items-center text-detail text-gray-500">
-        <p>©2025 Ferencz Toth — All rights reserved.</p>
+    <div
+        class="max-w-6xl mx-auto mt-10 flex flex-col sm:flex-row justify-between items-center text-base text-gray-500">
+        <p class="text-sm sm:text-xs">©2025 Ferencz Toth — All rights reserved.</p>
         <div class="flex space-x-6 mt-4 sm:mt-0">
-            <a href="#" class="hover:text-gray-900">Privacy</a>
-            <a href="#" class="hover:text-gray-900">Terms</a>
+
         </div>
     </div>
 </footer>

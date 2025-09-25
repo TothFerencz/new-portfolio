@@ -1,4 +1,4 @@
-<header class="relative bg-white min-h-screen flex flex-col justify-center px-6 pt-32 sm:pt-40 pb-20">
+<header id="home" class="relative bg-white min-h-screen flex flex-col justify-center px-6 pt-32 sm:pt-40 pb-20">
     <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
         <!-- Bal oldal -->
@@ -20,11 +20,11 @@
 
             <!-- CTA gombok -->
             <div class="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
-                <a href="#"
+                <a href="/contact"
                     class="px-6 py-3 rounded-full bg-gradient-to-b from-black to-gray-900 text-white text-detail hover:opacity-90 transition">
                     Get Started
                 </a>
-                <a href="#"
+                <a href="#about"
                     class="px-6 py-3 rounded-full bg-gray-100 text-gray-700 text-detail hover:bg-gray-200 transition">
                     Learn More
                 </a>

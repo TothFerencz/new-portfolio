@@ -2,7 +2,7 @@
     <div class="max-w-2xl mx-auto text-center">
         <!-- Badge -->
         <span
-            class="inline-flex items-center bg-white text-gray-700 text-detail px-4 py-1 rounded-full border border-gray-300 mb-6">
+            class="inline-flex items-center bg-white text-gray-700 text-detail  border border-gray-200 px-4 py-1 text-detail mb-6">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round"

@@ -1,5 +1,5 @@
 <!-- resources/views/partials/about.blade.php -->
-<section class="bg-white pt-32 pb-20 px-6">
+<section id="about" class="bg-white pt-32 pb-20 px-6">
     <div class="max-w-6xl mx-auto text-center">
         <!-- Badge -->
         <span class="inline-flex items-center justify-center bg-white border border-gray-200 px-4 py-1 text-detail mb-6">
