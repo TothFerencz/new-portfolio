@@ -7,35 +7,36 @@
             <img src="{{ asset('storage/myphoto.png') }}" alt="Profile"
                 class="w-14 h-14 rounded-full object-cover object-top">
             <div class="leading-tight">
-                <p class="font-semibold text-sm sm:text-base">Hi, I'm Ferencz.</p>
-                <p class="text-gray-500 text-xs sm:text-sm">Developer</p>
+                <p class="text-detail sm:text-body">Hi, I'm Ferencz.</p>
+                <p class="text-gray-500 text-xs sm:text-detail">Developer</p>
             </div>
         </div>
 
         <!-- Közép: menü -->
-        <div class="hidden md:flex flex-1 justify-center items-center space-x-5 text-sm">
-            <a href="{{ url('') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
+        <div class="hidden md:flex flex-1 justify-center items-center space-x-5 text-detail">
+            <a href="#home" class="px-2 py-2 text-gray-600 hover:text-black transition">
+                Home
+            </a>
+            <a href="#portfolio" class="px-2 py-2 text-gray-600 hover:text-black transition">
                 Portfolio
             </a>
-            <a href="{{ url('') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
-                Blog
-            </a>
-            <a href="{{ url('') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
+
+            <a href="#pricing" class="px-2 py-2 text-gray-600 hover:text-black transition">
                 Pricing
             </a>
-            <a href="{{ url('') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
+            <a href="#about" class="px-2 py-2 text-gray-600 hover:text-black transition">
                 About
             </a>
-            <a href="{{ url('') }}" class="px-2 py-2 font-medium text-gray-600 hover:text-black transition">
-                Faq
+            <a href="/contact" class="px-2 py-2 text-gray-600 hover:text-black transition">
+                Contact
             </a>
-            <span class="text-gray-300">|</span>
+
         </div>
 
         <!-- Jobb oldal: Get Started -->
         <div class="hidden md:flex">
             <a href="{{ url('/contact') }}"
-                class="ml-1 px-6 py-3 rounded-full bg-gradient-to-b from-black to-gray-900 text-white text-sm hover:opacity-90 transition">
+                class="ml-1 px-6 py-3 rounded-full bg-gradient-to-b from-black to-gray-900 text-white text-detail hover:opacity-90 transition">
                 Get Started
             </a>
         </div>
@@ -51,7 +52,7 @@
 
     <!-- Mobil menü -->
     <div id="mobile-menu"
-        class="hidden md:hidden bg-white/90 backdrop-blur-md mt-2 rounded-2xl border border-gray-200 p-4 space-y-2 text-sm">
+        class="hidden md:hidden bg-white/90 backdrop-blur-md mt-2 rounded-2xl border border-gray-200 p-4 space-y-2 text-detail">
         <a href="{{ url('/portfolio') }}"
             class="block px-3 py-2 rounded-md text-gray-600 hover:text-black hover:bg-gray-100">
             Portfolio
@@ -73,7 +74,7 @@
             Faq
         </a>
         <a href="{{ url('/contact') }}"
-            class="block w-full text-center px-5 py-2 rounded-full bg-black text-white text-xs font-medium hover:bg-gray-900">
+            class="block w-full text-center px-5 py-2 rounded-full bg-black text-white text-detail hover:bg-gray-900">
             Get Started
         </a>
     </div>

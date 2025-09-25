@@ -1,18 +1,19 @@
 <?php
 
-
 use App\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\ProjectController;
+use App\Models\PricingPlan;
 use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $projects = Project::latest()->take(4)->get();
-    return view('pages.home', compact('projects'));
+    $pricingPlans = PricingPlan::ordered()->get();
+
+    return view('pages.home', compact('projects', 'pricingPlans'));
 });
 
 Route::get('/contact', function () {
-  
     return view('pages.contact');
 });
 

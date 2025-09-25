@@ -13,31 +13,30 @@
         </div>
 
         <!-- Badge -->
-        <span
-            class="inline-flex items-center bg-white text-gray-700 text-sm px-4 py-1 rounded-full border border-gray-300 mb-6">
+        <span class="inline-flex items-center justify-center bg-white border border-gray-200 px-4 py-1 text-detail mb-6">
             Let’s Build Together
         </span>
 
         <!-- Headline -->
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 class="text-title font-contrast-thin text-gray-900 mb-4">
             Ready to start your next project?
         </h2>
 
         <!-- Leírás -->
-        <p class="text-gray-600 max-w-xl mx-auto mb-8 text-base">
+        <p class="text-body text-gray-600 max-w-xl mx-auto mb-8">
             As a Full-Stack Developer, I create clean, scalable, and user-focused solutions. Let’s turn your ideas into
             reality.
         </p>
 
         <!-- Gomb -->
         <a href="{{ url('/contact') }}"
-            class="inline-block px-6 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-gray-900 transition">
+            class="inline-block px-6 py-3 rounded-full bg-black text-white text-detail hover:bg-gray-900 transition">
             Get In Touch
         </a>
     </div>
 
     <!-- Alsó sor -->
-    <div class="max-w-6xl mx-auto mt-10 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
+    <div class="max-w-6xl mx-auto mt-10 flex flex-col sm:flex-row justify-between items-center text-detail text-gray-500">
         <p>©2025 Ferencz Toth — All rights reserved.</p>
         <div class="flex space-x-6 mt-4 sm:mt-0">
             <a href="#" class="hover:text-gray-900">Privacy</a>

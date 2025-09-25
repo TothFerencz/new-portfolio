@@ -1,18 +1,17 @@
-<section class="bg-white pt-12 pb-20 px-6">
+<section id="portfolio" class="bg-white pt-12 pb-20 px-6">
     <div class="max-w-6xl mx-auto text-center">
         <!-- Badge -->
-        <span
-            class="inline-flex items-center bg-white text-gray-700 text-sm px-4 py-1 rounded-full border border-gray-300 mb-6">
+        <span class="inline-flex items-center justify-center bg-white border border-gray-200 px-4 py-1 text-detail mb-6">
             Our Portfolio
         </span>
 
         <!-- Cím -->
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 class="text-title font-contrast-thin text-gray-900 mb-4">
             Proven results and stunning designs
         </h2>
 
         <!-- Leírás -->
-        <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-base sm:text-lg">
+        <p class="text-body text-gray-600 max-w-2xl mx-auto mb-12">
             Enduring and adaptable design
         </p>
     </div>
@@ -32,15 +31,15 @@
                 <!-- Tartalom -->
                 <div class="mt-6 flex items-start justify-between">
                     <div>
-                        <h3 class="font-semibold text-lg text-gray-900 mb-1">{{ $project->title }}</h3>
-                        <p class="text-gray-500 text-sm mb-4">{{ $project->category }} • {{ $project->years }}</p>
+                        <h3 class="text-base text-gray-900 mb-1">{{ $project->title }}</h3>
+                        <p class="text-detail text-gray-500 mb-4">{{ $project->category }} • {{ $project->years }}</p>
 
                         <!-- Kategóriák -->
                         <div class="flex flex-wrap gap-2">
                             @if (!empty($project->options) && is_array($project->options))
                                 @foreach ($project->options as $option)
                                     <span
-                                        class="inline-flex items-center bg-white text-gray-700 text-xs px-3 py-1 rounded-full border border-gray-300">
+                                        class="inline-flex items-center bg-white text-gray-700 text-detail px-3 py-1 rounded-full border border-gray-300">
                                         {{ $option }}
                                     </span>
                                 @endforeach

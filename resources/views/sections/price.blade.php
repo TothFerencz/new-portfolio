@@ -1,82 +1,66 @@
 <!-- resources/views/partials/price.blade.php -->
+@php
+    $plans = isset($plans) ? collect($plans) : collect();
+@endphp
 <section class="bg-white pt-12 pb-20 px-6">
     <div class="max-w-6xl mx-auto text-center">
-        <!-- Badge -->
-        <span
-            class="inline-flex items-center bg-white text-gray-700 text-sm px-4 py-1 rounded-full border border-gray-300 mb-6">
+        <span class="inline-flex items-center justify-center bg-white border border-gray-200 px-4 py-1 text-detail mb-6">
             Pricing
         </span>
 
-        <!-- Cím -->
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 class="text-title font-contrast-thin text-gray-900 mb-4">
             Flexible pricing
         </h2>
 
-        <!-- Leírás -->
-        <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-base sm:text-lg">
+        <p class="text-body text-gray-600 max-w-2xl mx-auto mb-12">
             Choose the right plan for your project. Every package includes more features as you scale up.
         </p>
 
-        <!-- Grid: 3 ár -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Ár 1 -->
-            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="font-semibold text-lg">Landing Page</h3>
-                    <span class="text-xl font-bold text-gray-900">$199</span>
-                </div>
-                <p class="text-sm text-gray-500 mb-6">Perfect for small projects, events or product showcases.</p>
-                <ul class="space-y-2 text-sm text-gray-700 flex-1">
-                    <li class="flex items-center"><span class="mr-2">✔</span> 1–3 sections</li>
-                    <li class="flex items-center"><span class="mr-2">✔</span> Responsive design</li>
-                    <li class="flex items-center"><span class="mr-2">✔</span> SEO setup</li>
-                    <li class="flex items-center"><span class="mr-2">✔</span> Basic analytics integration</li>
-                </ul>
-                <a href="{{ url('/contact') }}"
-                    class="mt-6 block w-full text-center px-5 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-gray-900 transition">
-                    Start Project
-                </a>
-            </div>
+            @forelse ($plans as $plan)
+                @php
+                    $features = collect($plan->features ?? [])->filter(static fn ($feature) => filled($feature));
+                @endphp
+                <div @class([
+                    'bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col relative transition',
+                    'border-gray-900 shadow-md ring-1 ring-gray-900/10' => $plan->is_featured,
+                ])>
+                    @if ($plan->is_featured)
+                        <span class="absolute top-4 right-4 text-xs px-3 py-1 rounded-full bg-black text-white tracking-wide">
+                            Popular
+                        </span>
+                    @endif
 
-            <!-- Ár 2 -->
-            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="font-semibold text-lg">Business Website</h3>
-                    <span class="text-xl font-bold text-gray-900">$499</span>
-                </div>
-                <p class="text-sm text-gray-500 mb-6">Ideal for businesses needing a professional online presence.</p>
-                <ul class="space-y-2 text-sm text-gray-700 flex-1">
-                    <li class="flex items-center"><span class="mr-2">✔</span> Up to 6 pages</li>
-                    <li class="flex items-center"><span class="mr-2">✔</span> Contact form integration</li>
-                    <li class="flex items-center"><span class="mr-2">✔</span> Optimized for speed</li>
-                    <li class="flex items-center"><span class="mr-2">✔</span> SEO setup + advanced analytics</li>
-                    <li class="flex items-center"><span class="mr-2">✔</span> Blog or news section</li>
-                </ul>
-                <a href="{{ url('/contact') }}"
-                    class="mt-6 block w-full text-center px-5 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-gray-900 transition">
-                    Start Project
-                </a>
-            </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-base text-left">{{ $plan->title }}</h3>
+                        <span class="text-base font-contrast-thin text-gray-900">{{ $plan->price_with_period }}</span>
+                    </div>
 
-            <!-- Ár 3 -->
-            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="font-semibold text-lg">E-Commerce</h3>
-                    <span class="text-xl font-bold text-gray-900">$999</span>
+                    @if (filled($plan->description))
+                        <p class="text-detail text-gray-500 mb-6 text-left">{{ $plan->description }}</p>
+                    @endif
+
+                    <ul class="space-y-2 text-detail text-gray-700 flex-1">
+                        @forelse ($features as $feature)
+                            <li class="flex items-center">
+                                <span class="mr-2">✔</span>
+                                <span>{{ $feature }}</span>
+                            </li>
+                        @empty
+                            <li class="text-gray-400">Details coming soon.</li>
+                        @endforelse
+                    </ul>
+
+                    <a href="{{ url($plan->cta_url ?? '/contact') }}"
+                        class="mt-6 block w-full text-center px-5 py-3 rounded-full bg-black text-white text-detail hover:bg-gray-900 transition">
+                        {{ $plan->cta_label ?? 'Start Project' }}
+                    </a>
                 </div>
-                <p class="text-sm text-gray-500 mb-6">Full-featured online store with complete management tools.</p>
-                <ul class="space-y-2 text-sm text-gray-700 flex-1">
-                    <li class="flex items-center"><span class="mr-2">✔</span> Product catalog & categories</li>
-                    <li class="flex items-center"><span class="mr-2">✔</span> Payment integration</li>
-                    <li class="flex items-center"><span class="mr-2">✔</span> Admin panel & stock management</li>
-                    <li class="flex items-center"><span class="mr-2">✔</span> Customer accounts & order tracking</li>
-                    <li class="flex items-center"><span class="mr-2">✔</span> Marketing tools & coupon system</li>
-                </ul>
-                <a href="{{ url('/contact') }}"
-                    class="mt-6 block w-full text-center px-5 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-gray-900 transition">
-                    Start Project
-                </a>
-            </div>
+            @empty
+                <div class="md:col-span-3 text-center text-gray-500 text-detail">
+                    Pricing information is coming soon.
+                </div>
+            @endforelse
         </div>
     </div>
 </section>

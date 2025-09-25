@@ -2,18 +2,17 @@
 <section class="bg-white pt-32 pb-20 px-6">
     <div class="max-w-6xl mx-auto text-center">
         <!-- Badge -->
-        <span
-            class="inline-flex items-center bg-white text-gray-700 text-sm px-4 py-1 rounded-full border border-gray-300 mb-6">
+        <span class="inline-flex justify-center bg-white border border-gray-200 px-4 py-1 text-detail mb-6">
             Priority
         </span>
 
         <!-- Cím -->
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 class="text-title font-contrast-thin text-gray-900 mb-4">
             Clean code, strong focus, real results
         </h2>
 
         <!-- Leírás -->
-        <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-base sm:text-lg">
+        <p class="text-body text-gray-600 max-w-2xl mx-auto mb-12">
             As a Full Stack Developer, I deliver robust and scalable solutions,
             always prioritizing performance, usability and long-term maintainability.
         </p>
@@ -34,10 +33,10 @@
                             </path>
                         </g>
                     </svg>
-                    <span class="ml-auto text-xs text-gray-500 border border-gray-300 rounded-md px-2 py-1">01</span>
+                    <span class="ml-auto text-detail text-gray-500 border border-gray-300 rounded-md px-2 py-1">01</span>
                 </div>
-                <h3 class="font-semibold text-lg mt-4 mb-2">Backend</h3>
-                <p class="text-gray-600 text-sm">
+                <h3 class="text-base mt-4 mb-2">Backend</h3>
+                <p class="text-detail text-gray-600">
                     APIs and business logic built for scalability and stability.
                 </p>
             </div>
@@ -60,10 +59,10 @@
                             </path>
                         </g>
                     </svg>
-                    <span class="ml-auto text-xs text-gray-500 border border-gray-300 rounded-md px-2 py-1">02</span>
+                    <span class="ml-auto text-detail text-gray-500 border border-gray-300 rounded-md px-2 py-1">02</span>
                 </div>
-                <h3 class="font-semibold text-lg mt-4 mb-2">Frontend</h3>
-                <p class="text-gray-600 text-sm">
+                <h3 class="text-base mt-4 mb-2">Frontend</h3>
+                <p class="text-detail text-gray-600">
                     Modern, responsive interfaces focused on user experience.
                 </p>
             </div>
@@ -85,10 +84,10 @@
                             </path>
                         </g>
                     </svg>
-                    <span class="ml-auto text-xs text-gray-500 border border-gray-300 rounded-md px-2 py-1">03</span>
+                    <span class="ml-auto text-detail text-gray-500 border border-gray-300 rounded-md px-2 py-1">03</span>
                 </div>
-                <h3 class="font-semibold text-lg mt-4 mb-2">Full Stack</h3>
-                <p class="text-gray-600 text-sm">
+                <h3 class="text-base mt-4 mb-2">Full Stack</h3>
+                <p class="text-detail text-gray-600">
                     End-to-end development: from database to user interface.
                 </p>
             </div>
